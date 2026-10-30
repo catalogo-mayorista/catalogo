@@ -1,0 +1,5 @@
+# PDF originales de la proveedora: tienen información interna
+fuentes/
+
+# Dependencias de Node (se pueden reinstalar, son miles de archivos)
+node_modules/

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Mayorista</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+
+  <!-- ========== ENCABEZADO ========== -->
+  <header class="encabezado">
+    <h1>Catálogo Mayorista</h1>
+    <p>Compra mínima: 50 unidades por producto</p>
+  </header>
+
+  <!-- ========== CONTENIDO PRINCIPAL ========== -->
+  <main>
+
+    <!-- Buscador -->
+    <section class="buscador">
+      <label for="campo-busqueda">Buscar producto</label>
+      <input type="search" id="campo-busqueda" placeholder="Ej: Sauvage, Afnan, 100ml...">
+    </section>
+
+    <!-- Lista de productos -->
+    <section class="catalogo">
+      <h2>Productos</h2>
+      <p id="contador-resultados">Mostrando 1 de 2846 productos</p>
+
+      <div id="lista-productos" class="lista-productos">
+
+        <!-- TARJETA DE EJEMPLO (después la genera JavaScript) -->
+        <article class="tarjeta" data-id="738253">
+          <p class="tarjeta-marca">ABERCROMBIE</p>
+          <h3 class="tarjeta-nombre">AUTHENTIC MOMENT FEM EDP</h3>
+          <p class="tarjeta-tamano">100ML</p>
+
+          <ul class="escalas">
+            <li><span>50 a 99 u.</span> <strong>$ 135.282,10</strong></li>
+            <li><span>100 a 149 u.</span> <strong>$ 125.952,30</strong></li>
+            <li><span>150 u. o más</span> <strong>$ 116.622,50</strong></li>
+          </ul>
+
+          <div class="selector-cantidad">
+            <button type="button" class="boton-restar" aria-label="Restar 10">−</button>
+            <input type="number" class="campo-cantidad" value="50" min="50" step="1"
+                   inputmode="numeric" aria-label="Cantidad">
+            <button type="button" class="boton-sumar" aria-label="Sumar 10">+</button>
+          </div>
+
+          <button type="button" class="boton-agregar">Agregar al pedido</button>
+        </article>
+
+      </div>
+
+      <button type="button" id="boton-ver-mas" class="boton-ver-mas">Ver más productos</button>
+    </section>
+
+  </main>
+
+  <!-- ========== BARRA FIJA (celular) ========== -->
+  <button type="button" id="barra-pedido" class="barra-pedido">
+    <span id="barra-resumen">Pedido: 1 producto · 50 u.</span>
+    <span>Ver pedido</span>
+  </button>
+
+  <!-- ========== PANEL DEL PEDIDO ========== -->
+  <aside id="panel-pedido" class="panel-pedido">
+    <h2>Tu pedido</h2>
+
+    <p id="pedido-vacio" class="pedido-vacio">Todavía no agregaste productos.</p>
+
+    <ul id="lista-pedido" class="lista-pedido">
+      <!-- RENGLÓN DE EJEMPLO (después lo genera JavaScript) -->
+      <li class="renglon" data-id="738253">
+        <p class="renglon-nombre">ABERCROMBIE AUTHENTIC MOMENT FEM EDP 100ML</p>
+        <p class="renglon-detalle">50 u. x $ 135.282,10 = <strong>$ 6.764.105,00</strong></p>
+        <button type="button" class="boton-eliminar">Quitar</button>
+      </li>
+    </ul>
+
+    <div class="totales">
+      <p>Total de unidades: <strong id="total-unidades">50</strong></p>
+      <p>Total: <strong id="total-pesos">$ 6.764.105,00</strong></p>
+    </div>
+
+    <button type="button" id="boton-enviar" class="boton-enviar">Enviar pedido por WhatsApp</button>
+  </aside>
+
+</body>
+</html>

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catálogo Mayorista</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>D</text></svg>">
 
   <!-- Tipografías: Playfair Display (títulos) e Inter (texto) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,13 +34,9 @@
     <!-- Lista de productos -->
     <section class="catalogo">
       <h2>Productos</h2>
-            <p id="contador-resultados">Cargando productos...</p>
-
+      <p id="contador-resultados">Cargando productos...</p>
 
       <div id="lista-productos" class="lista-productos">
-
-        <!-- TARJETA DE EJEMPLO (después la genera JavaScript) -->
-      
 
       </div>
 
@@ -50,7 +47,7 @@
 
   <!-- ========== BARRA FIJA (celular) ========== -->
   <button type="button" id="barra-pedido" class="barra-pedido">
-    <span id="barra-resumen">Pedido: 1 producto · 50 u.</span>
+    <span id="barra-resumen">Tu pedido está vacío</span>
     <span>Ver pedido</span>
   </button>
 
@@ -64,20 +61,14 @@
     <p id="pedido-vacio" class="pedido-vacio">Todavía no agregaste productos.</p>
 
     <ul id="lista-pedido" class="lista-pedido">
-      <!-- RENGLÓN DE EJEMPLO (después lo genera JavaScript) -->
-      <li class="renglon" data-id="738253">
-        <p class="renglon-nombre">ABERCROMBIE AUTHENTIC MOMENT FEM EDP 100ML</p>
-        <p class="renglon-detalle">50 u. x $ 135.282,10 = <strong>$ 6.764.105,00</strong></p>
-        <button type="button" class="boton-eliminar">Quitar</button>
-      </li>
     </ul>
 
     <div class="totales">
-      <p>Total de unidades: <strong id="total-unidades">50</strong></p>
-      <p>Total: <strong id="total-pesos">$ 6.764.105,00</strong></p>
+      <p>Total de unidades: <strong id="total-unidades">0</strong></p>
+      <p>Total: <strong id="total-pesos">$ 0,00</strong></p>
     </div>
 
-    <button type="button" id="boton-enviar" class="boton-enviar">Enviar pedido por WhatsApp</button>
+    <button type="button" id="boton-enviar" class="boton-enviar" disabled>Enviar pedido por WhatsApp</button>
   </aside>
 
 </body>

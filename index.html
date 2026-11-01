@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catálogo Mayorista</title>
+
+  <!-- Tipografías: Playfair Display (títulos) e Inter (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/app.js" defer></script>
 </head>
@@ -27,31 +33,13 @@
     <!-- Lista de productos -->
     <section class="catalogo">
       <h2>Productos</h2>
-      <p id="contador-resultados">Mostrando 1 de 2846 productos</p>
+            <p id="contador-resultados">Cargando productos...</p>
+
 
       <div id="lista-productos" class="lista-productos">
 
         <!-- TARJETA DE EJEMPLO (después la genera JavaScript) -->
-        <article class="tarjeta" data-id="738253">
-          <p class="tarjeta-marca">ABERCROMBIE</p>
-          <h3 class="tarjeta-nombre">AUTHENTIC MOMENT FEM EDP</h3>
-          <p class="tarjeta-tamano">100ML</p>
-
-          <ul class="escalas">
-            <li><span>50 a 99 u.</span> <strong>$ 135.282,10</strong></li>
-            <li><span>100 a 149 u.</span> <strong>$ 125.952,30</strong></li>
-            <li><span>150 u. o más</span> <strong>$ 116.622,50</strong></li>
-          </ul>
-
-          <div class="selector-cantidad">
-            <button type="button" class="boton-restar" aria-label="Restar 10">−</button>
-            <input type="number" class="campo-cantidad" value="50" min="50" step="1"
-                   inputmode="numeric" aria-label="Cantidad">
-            <button type="button" class="boton-sumar" aria-label="Sumar 10">+</button>
-          </div>
-
-          <button type="button" class="boton-agregar">Agregar al pedido</button>
-        </article>
+      
 
       </div>
 
@@ -68,7 +56,10 @@
 
   <!-- ========== PANEL DEL PEDIDO ========== -->
   <aside id="panel-pedido" class="panel-pedido">
-    <h2>Tu pedido</h2>
+    <div class="panel-encabezado">
+      <h2>Tu pedido</h2>
+      <button type="button" id="boton-cerrar-pedido" class="boton-cerrar" aria-label="Cerrar pedido">✕</button>
+    </div>
 
     <p id="pedido-vacio" class="pedido-vacio">Todavía no agregaste productos.</p>
 

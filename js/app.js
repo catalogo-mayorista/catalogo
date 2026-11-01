@@ -10,7 +10,7 @@ const CONFIG = {
 
   // WhatsApp de la proveedora: código de país (54) + 9 + código de área sin 0 + número sin 15.
   // Ejemplo para Rosario (341) 155-123456 → "5493415123456"
-  whatsapp: "5493517535296",
+  whatsapp: "5493541657745",
 };
 
 // ---------- 2. ESTADO ----------
